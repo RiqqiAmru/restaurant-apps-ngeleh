@@ -1,3 +1,4 @@
+require('./custom-element.js');
 const main = () => {
   // when click hamburger menu, toggle class
   const hamburger = document.querySelector('.hamburger');
@@ -20,6 +21,15 @@ const main = () => {
     navMenu.classList.remove('open');
   });
 
+  // add restourant list
+  const menu = document.querySelector('#menu');
+  const { restaurants } = require('../public/data/DATA.json');
+  menu.innerHTML = '';
+  restaurants.forEach((restaurant) => {
+    const card = document.createElement('card-restaurant');
+    card.restaurant = restaurant;
+    menu.appendChild(card);
+  });
 }
 
 module.exports = main;
