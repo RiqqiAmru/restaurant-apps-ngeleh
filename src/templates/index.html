@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ngeleh</title>
+    <title tabindex="0">Ngeleh</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../public/images/favicon.png"
+    />
   </head>
   <body>
+    <a href="#hero" tabindex="0" class="skip-link">Skip to Content</a>
     <nav class="nav">
       <div class="nav__logo">
         <span>Ngeleh</span> <button class="hamburger" type="button">☰</button>
@@ -22,28 +29,14 @@
     <main>
       <article>
         <section id="hero">
-          <h1>Ngeleh</h1>
+          <h1
+            tabindex="0"
+            aria-label="Ngeleh is javanese language for hungry, this is a website to booking a Indonesian restaurant"
+          >
+            Ngeleh
+          </h1>
         </section>
-        <section id="menu">
-          <card>
-            <div class="card__image">
-              <span class="kota">Pekalongan</span>
-            </div>
-            <div class="card__content">
-              <h4 class="rating">4.5</h4>
-              <h3 class="card__title">Nasi Goreng</h3>
-              <p class="card__description">
-                Nasi goreng, literally meaning "fried rice" in both the Malay
-                and Indonesian languages, is an Indonesian rice dish with pieces
-                of meat and vegetables added.
-              </p>
-              <div class="card__footer">
-                <button class="btn-favourite">Add to Favourite</button>
-                <button class="btn-booking">Booking Now</button>
-              </div>
-            </div>
-          </card>
-        </section>
+        <section id="menu"></section>
       </article>
     </main>
     <footer>copyright &copy; 2023 - Ngeleh</footer>

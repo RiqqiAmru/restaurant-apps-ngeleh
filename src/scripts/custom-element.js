@@ -18,12 +18,12 @@ class Card extends HTMLElement {
       }
     </style>
     <div class="card__image" id="gambar-${restaurant.id}">
-    <span class="kota">${restaurant.city}</span>
+    <span class="kota" tabindex="0">${restaurant.city}</span>
   </div>
   <div class="card__content">
-    <h4 class="rating">Rating : ${restaurant.rating}</h4>
-    <h3 class="card__title">${restaurant.name}</h3>
-    <p class="card__description">
+  <h3 class="card__title" tabindex="0">${restaurant.name}</h3>
+  <h4 class="rating" tabindex="0">Rating : ${restaurant.rating}</h4>
+    <p class="card__description" tabindex="0">
     ${restaurant.description}
     </p>
     <div class="card__footer">
