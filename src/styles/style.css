@@ -1,19 +1,20 @@
 card-restaurant {
   border: 2px solid black;
   border-radius: 10px;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__image {
   min-height: 200px;
   width: 100%;
-  background-image: url("../public/images/heros/hero-image_4.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+}
+
+.card__image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
 .kota {
@@ -24,6 +25,7 @@ card-restaurant {
   display: inline-block;
   transform: translateY(50%);
   transition: all 0.3s ease-in-out;
+  position: absolute;
 }
 .card__content {
   display: flex;
@@ -33,30 +35,33 @@ card-restaurant {
   min-height: 200px;
   width: 100%;
   gap: 5px;
-  flex-grow:1;
+  flex-grow: 1;
 }
-.card__description{
-  line-height:1.2;
-  text-align:justify;
+.card__description {
+  line-height: 1.2;
+  text-align: justify;
 }
 
 .card__footer {
-  display:flex;
+  display: flex;
   margin-top: 5px;
-  flex-grow:1;
-  align-self:flex-end;
-  align-items:flex-end;
-  gap:5px;
+  flex-grow: 1;
+  align-self: flex-end;
+  align-items: flex-end;
+  gap: 5px;
 }
 
 .card__footer button {
   background: rgb(255, 255, 195);
   font-weight: bold;
-  padding: 8px;
+  padding: 13px;
   box-shadow: 2px 4px 2px rgb(255, 197, 92);
   display: inline-block;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
+  min-width: 45px;
+  min-height: 45px;
+  font-size: 1em;
 }
 .card__footer button:active {
   background: rgb(233, 93, 53);

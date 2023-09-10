@@ -8,10 +8,10 @@ const main = () => {
     e.stopPropagation();
   });
 
-  // auto add class when screen size is bigger than 768px
+  //auto add class when screen size is bigger than 768px
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-      navMenu.classList.add('open');
+    if (window.innerWidth < 768) {
+      navMenu.classList.remove('open');
     }
   });
 

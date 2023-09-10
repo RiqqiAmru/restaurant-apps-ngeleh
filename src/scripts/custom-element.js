@@ -12,13 +12,11 @@ class Card extends HTMLElement {
 
   render(restaurant) {
     this.innerHTML = `
-    <style>
-      #gambar-${restaurant.id} {
-        background-image: url("${restaurant.pictureId}");
-      }
-    </style>
     <div class="card__image" id="gambar-${restaurant.id}">
     <span class="kota" tabindex="0">${restaurant.city}</span>
+    <img
+      src="${restaurant.pictureId}"
+      alt=""/>
   </div>
   <div class="card__content">
   <h3 class="card__title" tabindex="0">${restaurant.name}</h3>
