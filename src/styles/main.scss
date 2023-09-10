@@ -11,18 +11,20 @@ $yellow-light: rgb(255, 255, 195);
   font-family: "League Spartan", sans-serif;
 }
 
-html{
-  overflow-x:hidden;
+html {
+  overflow-x: hidden;
 }
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100%;
   left: 0;
   background-color: #bf1722;
   color: white;
   padding: 8px;
   z-index: 100;
+  min-width: 45px;
+  min-height: 45px;
 }
 
 .skip-link:focus {
@@ -33,7 +35,7 @@ html{
 
 .nav {
   display: flex;
-  flex-wrap:no-wrap;
+  flex-wrap: no-wrap;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
@@ -43,7 +45,6 @@ html{
   top: 0;
   z-index: 99;
   width: 100vw;
-  
 
   .nav__logo {
     display: flex;
@@ -55,7 +56,9 @@ html{
     text-shadow: 2px 4px 3px rgba(255, 255, 0, 1);
     padding: 10px 10px;
     .hamburger {
-      display: none;
+      transform: translateY(-200%);
+      min-width: 45px;
+      min-height: 45px;
     }
   }
 
@@ -64,15 +67,19 @@ html{
     list-style: none;
     gap: 20px;
     font-size: 1.2rem;
-    margin: 20px 0;
+    margin: 10px 0;
 
     li {
       a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-decoration: none;
         color: $red-orange;
         transition: all 0.3s ease-in-out;
         font-weight: 600;
-
+        min-width: 45px;
+        min-height: 45px;
         &:hover {
           color: $yellow-light;
         }
@@ -136,8 +143,6 @@ footer {
   font-weight: 600;
 }
 
-
-
 @media screen and (max-width: 425px) {
   .nav {
     flex-direction: column;
@@ -152,25 +157,17 @@ footer {
       color: $red-orange;
       border: none;
       background: none;
-      min-width:45px;
-      min-height:45px;
+      transform: translateY(0%) !important;
     }
     .nav-menu {
       position: absolute;
       transform: translateY(-100%);
       z-index: 998;
-      background:$orange;
-      padding:5px;
+      background: $orange;
+      padding: 5px;
       margin: 0px;
       min-width: 100vw;
       justify-content: space-around;
-      a{
-        min-width:45px;
-        min-height:45px;
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-      }
     }
     .nav-menu.open {
       transform: translateY(100%);
