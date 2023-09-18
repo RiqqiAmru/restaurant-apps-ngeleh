@@ -4,31 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title tabindex="0">Ngeleh</title>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../public/images/favicon.png"
-    />
   </head>
   <body>
     <a href="#hero" tabindex="0" class="skip-link">Skip to Content</a>
     <header>
       <nav class="nav">
         <div class="nav__logo">
-          <span>Ngeleh</span> <button class="hamburger" type="button" >☰</button>
+          <span>Ngeleh</span> <button class="hamburger" type="button">☰</button>
         </div>
 
-        <ul class="nav-menu open">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#">Favourite</a></li>
+        <ul class="nav-menu">
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/favourite">Favourite</a></li>
           <li>
             <a href="https://github.com/riqqiamru" target="_blank">About Us</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="mainContent">
       <article>
         <section id="hero">
           <h1
@@ -38,28 +32,7 @@
             Ngeleh
           </h1>
         </section>
-        <section id="menu">
-          <card-restaurant>
-            <div class="card__image" id="gambar-${restaurant.id}">
-              <span class="kota" tabindex="0">${restaurant.city}</span>
-              <img
-                src="https://restaurant-api.dicoding.dev/images/medium/41"
-                alt="gambar kosong"
-              />
-            </div>
-            <div class="card__content">
-              <h3 class="card__title" tabindex="0">${restaurant.name}</h3>
-              <h4 class="rating" tabindex="0">Rating : ${restaurant.rating}</h4>
-              <p class="card__description" tabindex="0">
-                ${restaurant.description}
-              </p>
-              <div class="card__footer">
-                <button class="btn-favourite">Add to Favourite</button>
-                <button class="btn-booking">Booking Now</button>
-              </div>
-            </div>
-          </card-restaurant>
-        </section>
+        <section id="menu"></section>
       </article>
     </main>
     <footer>copyright &copy; 2023 - Ngeleh</footer>

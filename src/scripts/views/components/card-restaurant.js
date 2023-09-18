@@ -1,6 +1,6 @@
-require('../styles/style.css');
-
-class Card extends HTMLElement {
+import '../../../styles/style.css';
+import API_ENDPOINT from '../../globals/api-endpoint';
+class CardRestaurant extends HTMLElement {
   constructor(restaurant) {
     super();
   }
@@ -15,7 +15,7 @@ class Card extends HTMLElement {
     <div class="card__image" id="gambar-${restaurant.id}">
     <span class="kota" tabindex="0">${restaurant.city}</span>
     <img
-      src="${restaurant.pictureId}"
+      src="${API_ENDPOINT.IMAGE_URL+restaurant.pictureId}"
       alt=""/>
   </div>
   <div class="card__content">
@@ -25,12 +25,15 @@ class Card extends HTMLElement {
     ${restaurant.description}
     </p>
     <div class="card__footer">
-      <button class="btn-favourite">Add to Favourite</button>
-      <button class="btn-booking">Booking Now</button>
+      <button class="btn-favourite">
+      <img src="../../../public/images/icons/heart.svg"" 
+       alt="Tambah ke Favourite" width="32" height="32">
+      </button>
+      <button class="btn-booking">Detail</button>
     </div>
     </div>
     `;
   }
 }
 
-customElements.define('card-restaurant', Card);
+customElements.define('card-restaurant', CardRestaurant);

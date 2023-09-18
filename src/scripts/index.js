@@ -1,5 +1,22 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.scss';
-const main = require('./main.js');
+import '../styles/style.css';
+import App from './views/app';
 
-document.addEventListener("DOMContentLoaded", main);
+const hamburgerBtn = document.querySelector('.hamburger');
+const navContent = document.querySelector('.nav-menu');
+const mainContent = document.querySelector('main');
+
+const app = new App({
+  hamburgerBtn,
+  navContent,
+  mainContent,
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+} );
