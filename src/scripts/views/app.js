@@ -2,6 +2,7 @@ import routes from '../routes/routes';
 import UrlParser from '../routes/url-parser';
 import DrawerNavInitiator from '../utils/drawer-nav-initiator';
 import './components/card-restaurant';
+import './components/detail-restaurant';
 
 class App {
   constructor({hamburgerBtn, navContent, mainContent}) {

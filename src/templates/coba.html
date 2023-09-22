@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coba detail</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <section id="restaurant">
+          <detail-restaurant>
+            <div class="card__image" id="gambar-ygewwl55ktckfw1e867">
+              <span class="kota" tabindex="0">Balikpapan</span>
+              <img
+                src="https://restaurant-api.dicoding.dev/images/medium/05"
+                alt=""
+                id="detail-img"
+              />
+            </div>
+            <div class="card__content">
+              <h3 class="card__title" tabindex="0">Istana Emas</h3>
+              <h4 class="card__rating" tabindex="0">Rating : 4.5</h4>
+              <div id="btn__container">
+                <button
+                  type="button"
+                  class="btn_tab_pane active"
+                  id="description"
+                  onclick="openTab(event, 'tab-1')"
+                >
+                  Description
+                </button>
+                <button
+                  type="button"
+                  class="btn_tab_pane"
+                  id="menu"
+                  onclick="openTab(event, 'tab-2')"
+                >
+                  Menu
+                </button>
+                <button
+                  type="button"
+                  class="btn_tab_pane"
+                  id="review"
+                  onclick="openTab(event, 'tab-3')"
+                >
+                  Review
+                </button>
+              </div>
+              <div id="tab-1" class="tab">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+                omnis nulla earum sed reiciendis quidem repellendus voluptate
+                incidunt! Omnis, vitae. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Assumenda repellendus laudantium libero
+                officia necessitatibus quaerat officiis in, reiciendis dolorum
+                atque, voluptates harum rerum tenetur ipsam reprehenderit eaque
+                veniam quibusdam fugiat porro perferendis a! Quasi vero nihil
+                beatae, deleniti quo ipsa consequuntur aperiam, unde at sit
+                adipisci obcaecati perferendis explicabo dolore.
+              </div>
+              <div id="tab-2" class="tab none">
+                <div class="menu">
+                  <div class="menu-makanan">
+                    <h5>Makanan</h5>
+                    <ul>
+                      <li>Nasi goreng aaaaaaaaaaa</li>
+                      <li>Kangkung</li>
+                      <li>Tempe</li>
+                    </ul>
+                  </div>
+                  <div class="menu-minuman">
+                    <h5>Minuman</h5>
+                    <ul>
+                      <li>Air Kali</li>
+                      <li>Air kolah</li>
+                      <li>Air saja</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div id="tab-3" class="tab none">
+                <div class="add__review">
+                  <h5>Add Review</h5>
+                  <form action="" method="post" class="add_review_form">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      class="add__review__input"
+                      placeholder="Masukkan Nama"
+                    />
+                    <textarea
+                      name="review"
+                      id="review"
+                      class="add__review__input"
+                      placeholder="Masukkan Review anda"
+                      rows="4"
+                    ></textarea>
+                    <button type="button" class="add_review_btn">Submit</button>
+                  </form>
+                </div>
+                <div class="review">
+                  <div class="review__item">
+                    <h5>Andi</h5>
+                    <span>13 jan 2029</span>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, voluptatum.
+                    </p>
+                  </div>
+                  <div class="review__item">
+                    <h5>Budi</h5>
+                    <span class="tanggal">13 jan 2029</span>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, voluptatum.
+                    </p>
+                  </div>
+                  <div class="review__item">
+                    <h5>Caca</h5>
+                    <span>13 jan 2029</span>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, voluptatum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </detail-restaurant>
+        </section>
+      </article>
+      <script>
+        function openTab(evt, tabName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tab");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.add("none");
+          }
+          tablinks = document.getElementsByClassName("btn_tab_pane");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+          }
+          document.getElementById(tabName).classList.remove("none");
+          evt.currentTarget.classList.add("active");
+        }
+      </script>
+    </main>
+  </body>
+</html>

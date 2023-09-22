@@ -1,7 +1,7 @@
 import '../../../styles/style.css';
 import API_ENDPOINT from '../../globals/api-endpoint';
 
-class CardRestaurant extends HTMLElement {
+class DetailRestaurant extends HTMLElement {
   constructor(restaurant) {
     super();
   }
@@ -26,17 +26,10 @@ class CardRestaurant extends HTMLElement {
     ${restaurant.description}
     </p>
     <div class="card__footer">
-      <button class="btn-favourite">
-        <img src="./images/icons/bookmarks.svg" alt="Tambah ke Favorite" />
-      </button>
-      <a href="#/detail/${restaurant.id}" class="btn-detail" tabindex="0">
-       <img src="./images/icons/arrow-down-right.svg" alt="detail" />
-      </a>
-      
     </div>
     </div>
     `;
   }
 }
 
-customElements.define('card-restaurant', CardRestaurant);
+customElements.define('detail-restaurant', DetailRestaurant);
