@@ -1,4 +1,4 @@
-# Restaurant App (Ngeleh)
+# Restaurant App (Ngeleh) + PWA
 
 ## Description
 
@@ -9,8 +9,11 @@ sebuah aplikasi web untuk melihat daftar restaurant dan detailnya.
 - [x]mobile first hide nav
 - [x]use img not div in card
 
+- [x]use data from API
+- []add detail page
+- []use indexedDB for favorite
+- []use service worker to cache request
+
 problem:
 
-- [x]scroll y nav overlap
-- [x]navbar collapse x
-- []while view width is <=280 nav overlap, hanya berlaku ketika mengaktifkan emulator mobile
+- [] div tab not full width why?

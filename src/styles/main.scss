@@ -15,6 +15,12 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 .skip-link {
   position: absolute;
   top: -100%;
@@ -141,6 +147,7 @@ footer {
   font-size: 1.2rem;
   text-align: center;
   font-weight: 600;
+  margin-top: auto;
 }
 
 @media screen and (max-width: 425px) {
