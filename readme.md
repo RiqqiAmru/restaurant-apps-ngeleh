@@ -16,4 +16,4 @@ sebuah aplikasi web untuk melihat daftar restaurant dan detailnya.
 
 problem:
 
-- [] div tab not full width why?
+- [] belum ada pesan toast untuk feedback user mengirim review

@@ -104,6 +104,13 @@ card-restaurant {
   margin-left: 10px;
 }
 
+.tab_container {
+  width: 100%;
+  min-height: 200px;
+  overflow-x: hidden;
+  max-width: 1000px;
+}
+
 .btn_tab_pane {
   display: inline;
   padding: 10px;
@@ -131,6 +138,7 @@ card-restaurant {
   border-radius: 10px;
   padding: 10px;
   transition: 0.3s ease-in-out;
+  /* flex-grow: 1; */
 }
 .none {
   display: none;
@@ -147,7 +155,7 @@ card-restaurant {
   max-width: 600px;
   margin-top: 5px;
   margin-left: 10px;
-  line-height: 1.12em;
+  line-height: 1.2em;
 }
 
 /* review */
@@ -218,6 +226,7 @@ card-restaurant {
   gap: 10px;
   list-style: none;
   margin: 5px;
+  margin-bottom: 10px;
   line-height: 1.12em;
 }
 
@@ -234,8 +243,4 @@ card-restaurant {
   border: white;
   text-decoration: none;
   padding: 15px;
-}
-
-* {
-  outline: 1px solid red;
 }
