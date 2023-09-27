@@ -1,5 +1,6 @@
 import '../../../styles/style.css';
 import RestaurantAPIDicodingSource from '../../data/restaurant-api-dicoding';
+import ToastMessage from '../../utils/toast-message';
 
 class DetailRestaurant extends HTMLElement {
   constructor(restaurant) {
@@ -9,14 +10,14 @@ class DetailRestaurant extends HTMLElement {
   set restaurant(restaurant) {
     this._restaurant = restaurant;
     this.render(restaurant);
-    console.log(restaurant);
 
     this.makeTabClickAble();
     this.loopCategory();
     this.loopMenu();
-    this.loopReview();
+    this.loopReview(this._restaurant.customerReviews);
     this.addReview(this._restaurant.id);
   }
+
 
   render(restaurant) {
     this.innerHTML = `
@@ -30,7 +31,7 @@ class DetailRestaurant extends HTMLElement {
             </div>
             <div class="card__content">
               <h3 class="card__title" tabindex="0">${restaurant.name}</h3>
-              <h4 class="card__rating" tabindex="0">Rating : ${restaurant.rating}</h4>
+              <h4 class="card__rating" tabindex="0">⭐️ ${restaurant.rating}</h4>
               <p>${restaurant.description}</p>
               <div class="category">  
                 <ul>
@@ -79,6 +80,7 @@ class DetailRestaurant extends HTMLElement {
                       id="name"
                       class="add__review__input"
                       placeholder="Masukkan Nama"
+                      required
                     />
                     <textarea
                       name="review"
@@ -86,6 +88,7 @@ class DetailRestaurant extends HTMLElement {
                       class="add__review__input"
                       placeholder="Masukkan Review anda"
                       rows="4"
+                      required
                     ></textarea>
                     <button type="button" class="add_review_btn">Submit</button>
                   </form>
@@ -142,22 +145,17 @@ class DetailRestaurant extends HTMLElement {
     });
   }
 
-  loopReview() {
+  loopReview(customerReviews) {
     const review = this.querySelector('.review');
-    console.log(review);
     review.innerHTML = '';
-    console.log('after reset', review.innerHTML);
-    // order by date desc
-    this._restaurant.customerReviews.sort((a, b) => {
-      return new Date(b.date) - new Date(a.date);
-    });
-    this._restaurant.customerReviews.forEach((item) => {
+
+    customerReviews.reverse().forEach((item) => {
       review.innerHTML += `
-        <div class="review__item">
-          <h5>${item.name}</h5>
-          <span class="tanggal">${item.date}</span>
-          <p>${item.review}</p>
-        </div>
+      <div class="review__item">
+      <h5>${item.name}</h5>
+      <span class="tanggal">${item.date}</span>
+      <p>${item.review}</p>
+      </div>
       `;
     });
   }
@@ -166,31 +164,33 @@ class DetailRestaurant extends HTMLElement {
     const addReviewBtn = this.querySelector('.add_review_btn');
     const name = this.querySelector('#name');
     const review = this.querySelector('#input_review');
+
     addReviewBtn.addEventListener('click', (event) => {
       event.preventDefault();
       const reviewData = {
-        'id': id,
-        'name': name.value,
-        'review': review.value,
+        id: id,
+        name: name.value,
+        review: review.value,
       };
 
-      // RestaurantAPIDicodingSource.addReview(reviewData)
-      //     .then((response) => {
-      //       console.log(response);
-      //       name.value = '';
-      //       review.value = '';
-      //     }).catch((error) => {
-      //       console.log(error);
-      //     });
-
-      this.loopReview();
+      RestaurantAPIDicodingSource.addReview(reviewData)
+          .then((response) => {
+            console.log(response);
+            if (response.error) {
+              console.log(response.message);
+              ToastMessage.show(response.message, 'error');
+              return;
+            }
+            ToastMessage.show('Review Berhasil ditambahkan', 'success');
+            this.loopReview(response.customerReviews);
+            name.value = '';
+            review.value = '';
+          }).catch((error) => {
+            ToastMessage.show(error, 'error');
+            console.log(error);
+          });
     });
   }
-  resetReview() {
-    const review = this.querySelector('.review');
-    review.innerHTML = '';
-  };
 }
-
 
 customElements.define('detail-restaurant', DetailRestaurant);

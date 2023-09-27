@@ -244,3 +244,98 @@ card-restaurant {
   text-decoration: none;
   padding: 15px;
 }
+
+.toast {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  padding: 5px;
+  display: inline-block;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  min-width: 45px;
+  min-height: 45px;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 15px;
+  z-index: 99;
+  margin: 10px;
+  cursor: pointer;
+  animation-name: loading-toast-time;
+  animation-duration: 4s;
+}
+
+.success {
+  --color: hsl(108, 76%, 50%);
+  --shadow-color: hsl(108, 76%, 80%);
+}
+
+.error {
+  --color: hsl(10, 76%, 50%);
+  --shadow-color: hsl(0, 76%, 80%);
+}
+
+@keyframes loading-toast-time {
+  25% {
+    border-top: 3px solid var(--color);
+  }
+  50% {
+    border-right: 3px solid var(--color);
+  }
+  75% {
+    border-bottom: 3px solid var(--color);
+  }
+  100% {
+    border-left: 3px solid var(--color);
+    box-shadow: 0 0 10px var(--shadow-color);
+  }
+}
+
+.loading {
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.loading__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  min-height: 50px;
+}
+.loading__item {
+  width: 20px;
+  height: 40px;
+  border-radius: 10px;
+  background: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading__item:nth-child(1) {
+  animation: loading 1s infinite;
+}
+.loading__item:nth-child(2) {
+  animation: loading 1s infinite 0.2s;
+}
+.loading__item:nth-child(3) {
+  animation: loading 1s infinite 0.4s;
+}
+
+@keyframes loading {
+  0% {
+    height: 40px;
+  }
+  50% {
+    height: 20px;
+  }
+  100% {
+    height: 40px;
+  }
+}

@@ -21,7 +21,7 @@ class CardRestaurant extends HTMLElement {
   </div>
   <div class="card__content">
   <h3 class="card__title" tabindex="0">${restaurant.name}</h3>
-  <h4 class="rating" tabindex="0">Rating : ${restaurant.rating}</h4>
+  <h4 class="rating" tabindex="0">⭐️ ${restaurant.rating}</h4>
     <p class="card__description" tabindex="0">
     ${restaurant.description}
     </p>

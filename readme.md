@@ -10,10 +10,12 @@ sebuah aplikasi web untuk melihat daftar restaurant dan detailnya.
 - [x]use img not div in card
 
 - [x]use data from API
-- []add detail page
+- [x]add detail page
 - []use indexedDB for favorite
 - []use service worker to cache request
 
-problem:
+- [x] buat toast message : [gagal add review, berhasil add review], tambah favorite, hapus favorite
+- [x] buat custom loading : [home, detail] favorite
+- [] buat search element, include search via category in detail, search in favorite
 
-- [] belum ada pesan toast untuk feedback user mengirim review
+problem:
