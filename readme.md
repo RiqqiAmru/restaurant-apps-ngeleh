@@ -11,11 +11,19 @@ sebuah aplikasi web untuk melihat daftar restaurant dan detailnya.
 
 - [x]use data from API
 - [x]add detail page
-- []use indexedDB for favorite
+- [x]use indexedDB for favorite
 - []use service worker to cache request
 
 - [x] buat toast message : [gagal add review, berhasil add review], tambah favorite, hapus favorite
 - [x] buat custom loading : [home, detail] favorite
-- [] buat search element, include search via category in detail, search in favorite
+- [] buat search element, include search via category in detail,
+- [] tampilkan keterangan bila request gagal,
+  getAllrestaurant = home
+  getDetailRestaurant = detail
+  getReviewRestaurant = detail
+  getFavoriteRestaurant = favorite
+  addFavoriteRestaurant = detail
+  deleteFavoriteRestaurant = favorite
+  addReviewRestaurant = detail
 
 problem:

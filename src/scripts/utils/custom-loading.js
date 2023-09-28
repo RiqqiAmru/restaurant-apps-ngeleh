@@ -4,7 +4,7 @@ const CustomLoading = {
     loading.classList.add('loading');
     loading.innerHTML = `
     <div class="loading__container">
-      <div class="loading__item"></div>
+      <div class="loading__item"></div> 
       <div class="loading__item"></div>
       <div class="loading__item"></div>
     </div>
@@ -15,7 +15,9 @@ const CustomLoading = {
   },
   hide: (parent) => {
     const loading = parent.querySelector('.loading');
-    parent.removeChild(loading);
+    if (loading) {
+      parent.removeChild(loading);
+    }
   },
 
 };

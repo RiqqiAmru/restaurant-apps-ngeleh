@@ -9,6 +9,9 @@ const Hero = {
       >
         Ngeleh
       </h1>
+      <div>
+      <input type="search" id="search-restaurant" placeholder="Search restaurant" />
+      </div>
     </section>
     `;
   },

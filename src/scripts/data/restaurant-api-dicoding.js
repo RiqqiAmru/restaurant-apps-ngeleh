@@ -22,6 +22,12 @@ const RestaurantAPIDicodingSource = {
     });
     return response.json();
   },
+
+  async searchRestaurants(query) {
+    const response = await fetch(API_ENDPOINT.search(query));
+    const responseJson = await response.json();
+    return responseJson.restaurants;
+  },
 };
 
 export default RestaurantAPIDicodingSource;

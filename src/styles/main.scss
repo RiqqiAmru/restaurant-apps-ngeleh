@@ -100,7 +100,8 @@ main {
   article {
     #hero {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      gap: 20px;
       justify-content: center;
       align-items: center;
       text-align: center;
@@ -119,6 +120,22 @@ main {
         color: $red-orange;
         font-size: 4rem;
         text-shadow: 2px 4px 2px rgba(255, 255, 0, 1);
+      }
+
+      #search-restaurant {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        margin: 0px;
+        max-width: 1200px;
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 600;
+        margin-top: auto;
+        border-radius: 20px;
+        opacity: 0.75;
       }
     }
 

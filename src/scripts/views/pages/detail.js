@@ -1,16 +1,15 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantAPIDicodingSource from '../../data/restaurant-api-dicoding';
 import CustomLoading from '../../utils/custom-loading';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
     return `
   <article>
    <section id="restaurant">
-
    </section>
-   
-   </div>
+   <div id="likeButtonContainer"></div>
   </article>`;
   },
 
@@ -25,6 +24,10 @@ const Detail = {
       detailRestaurant.restaurant = restaurant;
       restaurantContainer.appendChild(detailRestaurant);
     }
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant: restaurant,
+    });
   },
 };
 

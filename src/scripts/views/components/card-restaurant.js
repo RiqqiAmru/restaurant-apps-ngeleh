@@ -26,13 +26,11 @@ class CardRestaurant extends HTMLElement {
     ${restaurant.description}
     </p>
     <div class="card__footer">
-      <button class="btn-favourite">
-        <img src="./images/icons/bookmarks.svg" alt="Tambah ke Favorite" />
-      </button>
-      <a href="#/detail/${restaurant.id}" class="btn-detail" tabindex="0">
+      <div id="favourite-container-${restaurant.id}" class="favourite-container">
+      </div>
+      <a href="#/detail/${restaurant.id}" class="btn-detail" tabindex="0" id="detail-${restaurant.id}">
        <img src="./images/icons/arrow-down-right.svg" alt="detail" />
       </a>
-      
     </div>
     </div>
     `;
