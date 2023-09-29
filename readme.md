@@ -12,7 +12,7 @@ sebuah aplikasi web untuk melihat daftar restaurant dan detailnya.
 - [x]use data from API
 - [x]add detail page
 - [x]use indexedDB for favorite
-- [] use service worker to cache request
+- [x] use service worker to cache request
 - [x] use web manifest
 
 - [x] buat toast message : [gagal add review, berhasil add review], tambah favorite, hapus favorite
@@ -26,5 +26,5 @@ sebuah aplikasi web untuk melihat daftar restaurant dan detailnya.
       [x] addFavoriteRestaurant = detail
       [x] deleteFavoriteRestaurant = favorite
       [x] addReviewRestaurant = detail
-
-problem:
+- [] add cache to font
+- [] bagaimana cara agar bisa review ketika offline

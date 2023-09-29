@@ -276,6 +276,11 @@ card-restaurant {
   --shadow-color: hsl(0, 76%, 80%);
 }
 
+.info {
+  --color: hsl(200, 76%, 50%);
+  --shadow-color: hsl(200, 76%, 80%);
+}
+
 @keyframes loading-toast-time {
   25% {
     border-top: 3px solid var(--color);

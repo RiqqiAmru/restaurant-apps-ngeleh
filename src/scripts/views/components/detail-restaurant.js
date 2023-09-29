@@ -16,6 +16,7 @@ class DetailRestaurant extends HTMLElement {
     this.loopMenu();
     this.loopReview(this._restaurant.customerReviews);
     this.addReview(this._restaurant.id);
+    RestaurantAPIDicodingSource.sendPendingReview();
   }
 
 
@@ -178,7 +179,6 @@ class DetailRestaurant extends HTMLElement {
             console.log(response);
             if (response.error) {
               console.log(response.message);
-              ToastMessage.show(response.message, 'error');
               return;
             }
             ToastMessage.show('Review Berhasil ditambahkan', 'success');
@@ -186,7 +186,6 @@ class DetailRestaurant extends HTMLElement {
             name.value = '';
             review.value = '';
           }).catch((error) => {
-            ToastMessage.show(error, 'error');
             console.log(error);
           });
     });
