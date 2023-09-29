@@ -130,7 +130,7 @@ class DetailRestaurant extends HTMLElement {
     // loop category
     const category = this.querySelector('.category ul');
     this._restaurant.categories.forEach((item) => {
-      category.innerHTML += `<li><a href="" class="category__item">${item.name}</a></li>`;
+      category.innerHTML += `<li><a href="#/search/${item.name}" class="category__item">${item.name}</a></li>`;
     });
   }
 

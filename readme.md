@@ -13,17 +13,18 @@ sebuah aplikasi web untuk melihat daftar restaurant dan detailnya.
 - [x]add detail page
 - [x]use indexedDB for favorite
 - []use service worker to cache request
+- [] use PWA
 
 - [x] buat toast message : [gagal add review, berhasil add review], tambah favorite, hapus favorite
 - [x] buat custom loading : [home, detail] favorite
-- [] buat search element, include search via category in detail,
-- [] tampilkan keterangan bila request gagal,
-  getAllrestaurant = home
-  getDetailRestaurant = detail
-  getReviewRestaurant = detail
-  getFavoriteRestaurant = favorite
-  addFavoriteRestaurant = detail
-  deleteFavoriteRestaurant = favorite
-  addReviewRestaurant = detail
+- [x] buat search element, include search via category in detail,
+- [x] tampilkan keterangan bila request gagal, log and Toast
+      [x] getAllrestaurant = home
+      [x] getDetailRestaurant = detail
+      [x] getReviewRestaurant = detail
+      [x] getFavoriteRestaurant = favorite
+      [x] addFavoriteRestaurant = detail
+      [x] deleteFavoriteRestaurant = favorite
+      [x] addReviewRestaurant = detail
 
 problem:

@@ -18,7 +18,11 @@ const LikeButtonInitiator={
   },
 
   async _isRestaurantExist(id) {
-    const restaurant = await FavouriteRestaurantIdb.getRestaurant(id);
+    const restaurant = await FavouriteRestaurantIdb.getRestaurant(id)
+        .catch((error) => {
+          console.log(error);
+          ToastMessage.show('Failed to load data Restaurant', 'error');
+        });
     return !!restaurant;
   },
 
@@ -28,7 +32,11 @@ const LikeButtonInitiator={
     const likeButton = document.querySelector(`#likeButton`);
 
     likeButton.addEventListener('click', async () => {
-      await FavouriteRestaurantIdb.putRestaurant(this._restaurant);
+      await FavouriteRestaurantIdb.putRestaurant(this._restaurant)
+          .catch((error) => {
+            console.log(error);
+            ToastMessage.show('Failed to add Favourite Restaurant', 'error');
+          });
       this._renderButton();
     });
   },
@@ -38,7 +46,11 @@ const LikeButtonInitiator={
 
     const likeButton = document.querySelector(`#likeButton`);
     likeButton.addEventListener('click', async () => {
-      await FavouriteRestaurantIdb.deleteRestaurant(this._restaurant.id);
+      await FavouriteRestaurantIdb.deleteRestaurant(this._restaurant.id)
+          .catch((error) => {
+            console.log(error);
+            ToastMessage.show('Failed to delete this Favourite Restaurant', 'error');
+          });
       this._renderButton();
     });
   },
