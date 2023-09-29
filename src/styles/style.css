@@ -191,6 +191,8 @@ card-restaurant {
 }
 
 .add__review__input {
+  min-width: 45px;
+  min-height: 45px;
   border-radius: 10px;
   border: none;
   padding: 5px;
