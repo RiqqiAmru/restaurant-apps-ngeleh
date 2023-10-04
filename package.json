@@ -6,6 +6,7 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "sharp": "node sharp.js",
     "serve": "http-server dist -p 8080",
     "test": "karma start",
     "lint": "eslint ./src"
@@ -35,6 +36,7 @@
     "karma-webpack": "^5.0.0",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2",
+    "sharp": "^0.32.6",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
     "webpack-bundle-analyzer": "^4.9.1",
@@ -49,6 +51,7 @@
   },
   "dependencies": {
     "idb": "^7.1.1",
+    "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.9",
     "workbox-window": "^7.0.0"
   }

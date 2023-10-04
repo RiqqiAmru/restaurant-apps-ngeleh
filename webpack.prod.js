@@ -26,6 +26,7 @@ module.exports = merge(common, {
       },
     ],
   },
+
   plugins: [
     new WorkboxWebpackPlugin.InjectManifest({
       swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),

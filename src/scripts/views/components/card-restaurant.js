@@ -17,7 +17,9 @@ class CardRestaurant extends HTMLElement {
     <span class="kota" tabindex="0">${restaurant.city}</span>
     <img
       src="${API_ENDPOINT.IMAGE_URL+restaurant.pictureId}"
-      alt=""/>
+      alt=""
+      class="lazyload"
+      />
   </div>
   <div class="card__content">
   <h3 class="card__title" tabindex="0">${restaurant.name}</h3>

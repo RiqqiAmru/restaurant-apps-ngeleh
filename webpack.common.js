@@ -27,6 +27,33 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 20000,
+      maxSize: 70000,
+      minRemainingSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      automaticNameDelimiter: '~',
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true,
+          name: 'vendor',
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+          name: 'common',
+        },
+      },
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -36,10 +63,13 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/public/'),
+          globOptions: {
+            ignore: ['**/images/heros/**', '**/images/favicon.png'],
+          },
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
     }),
-    new FaviconsWebpackPlugin('./src/public/images/favicon.png'),
+    new FaviconsWebpackPlugin('src/public/images/favicon.png'),
   ],
 };
