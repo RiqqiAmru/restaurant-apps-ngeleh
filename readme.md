@@ -31,10 +31,10 @@ sebuah aplikasi web untuk melihat daftar restaurant dan detailnya.
 
 <!-- submission 3 -->
 
-- [] integration testing : [suka, batal suka restaurant]
-- [] end to end testing
-  [] suka salah satu restaurant
-  [] batal suka salah satu restaurant \* add review salah satu restaurant
+- [x] integration testing : [suka, batal suka restaurant]
+- [x] end to end testing
+      [x] suka salah satu restaurant
+      [x] batal suka salah satu restaurant \* add review salah satu restaurant
 - [x] kompresi hero image, webp
 - [x] responsive image hero
 - [x] add lazy loading image restaurant
@@ -42,7 +42,6 @@ sebuah aplikasi web untuk melihat daftar restaurant dan detailnya.
 - [] minimize/uglifiying css : tidak perlu karena data css kecil 30kb
 - [x] memakai bundler analyzer : hanya untuk development
 - [x] code splitting : hanya untuk production
-- [] deploy to github pages
+- [x] deploy to github pages
 - [] web vitals [FCP < 2.5s, LCP < 2.5s, TBT < 100ms, CLS < 0.1]
-
-## problem
+  npm

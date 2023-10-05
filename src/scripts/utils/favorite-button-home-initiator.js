@@ -35,7 +35,7 @@ class FavoriteButtonHomeInitiator {
 
   _renderLike() {
     this._favouriteButton.innerHTML = `
-    <button id="favorite-${this._id}">
+    <button id="favorite-${this._id}" aria-label="Tambah ke Favorite">
     <img src="./images/icons/bookmarks.svg" alt="Tambah ke Favorite" />
     </button>
     `;
@@ -54,7 +54,7 @@ class FavoriteButtonHomeInitiator {
 
   _renderLiked() {
     this._favouriteButton.innerHTML = `
-    <button id="favorite-${this._id}">
+    <button id="favorite-${this._id}" aria-label="Hapus dari Favorite">
     <img src="./images/icons/bookmarks-fill.svg" alt="Hapus dari  Favorite" />
     </button>
     `;
