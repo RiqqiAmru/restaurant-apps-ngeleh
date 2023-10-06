@@ -37,8 +37,6 @@ body {
   top: 0;
 }
 
-// kenapa ketika layar kecil navbar tidak full width?
-
 .nav {
   display: flex;
   flex-wrap: no-wrap;
@@ -82,7 +80,6 @@ body {
         justify-content: center;
         text-decoration: none;
         color: $red-orange;
-        transition: all 0.3s ease-in-out;
         font-weight: 600;
         min-width: 45px;
         min-height: 45px;
@@ -108,7 +105,6 @@ main {
       min-height: 400px;
       width: 100vw;
       max-width: 1200px;
-      background-image: url("../public/images/heros/hero-image_4-large.jpg");
       background-image: url("../public/images/heros/hero-image_4-large.webp");
       background-color: $red-orange;
       background-size: cover;

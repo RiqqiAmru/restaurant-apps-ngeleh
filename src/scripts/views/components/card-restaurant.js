@@ -31,7 +31,7 @@ class CardRestaurant extends HTMLElement {
       <div id="favourite-container-${restaurant.id}" class="favourite-container">
       </div>
       <a href="#/detail/${restaurant.id}" class="btn-detail" tabindex="0" id="detail-${restaurant.id}">
-       <img src="./images/icons/arrow-down-right.svg" alt="detail" />
+       <img src="./images/icons/arrow-down-right.svg" alt="detail" width="30" height="30" />
       </a>
     </div>
     </div>
